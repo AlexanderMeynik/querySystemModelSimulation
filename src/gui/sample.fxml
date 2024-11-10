@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #0000FF; -fx-background-image: url('file:src/assets/sdedwedwd.jpg');" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Controller">
+    <children>
+        <AnchorPane layoutY="100.0" prefHeight="350.0" prefWidth="600.0" style="-fx-background-color: #E6E6FA; -fx-background-image: url('file:src/assets/photo-1588345921523-c2dcdb7f1dcd.jpg');" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+            <children>
+                <Label layoutX="120.0" layoutY="74.0" prefHeight="39.0" prefWidth="105.0" text="Buffers Number">
+                    <font>
+                        <Font name="Times New Roman" size="12.0" />
+                    </font>
+                </Label>
+                <Label layoutX="120.0" layoutY="124.0" prefHeight="39.0" prefWidth="105.0" text="Devices Number">
+                    <font>
+                        <Font name="Times New Roman" size="12.0" />
+                    </font>
+                </Label>
+                <Label layoutX="120.0" layoutY="219.0" prefHeight="39.0" prefWidth="105.0" text="Mode">
+                    <font>
+                        <Font name="Times New Roman" size="12.0" />
+                    </font>
+                </Label>
+                <Label layoutX="120.0" layoutY="22.0" prefHeight="39.0" prefWidth="105.0" text="Sources Number">
+                    <font>
+                        <Font name="Times New Roman" size="12.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="bffNum" layoutX="290.0" layoutY="81.0" prefHeight="25.0" prefWidth="149.0">
+                    <font>
+                        <Font name="Times New Roman" size="12.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="devNum" layoutX="289.0" layoutY="133.0">
+                    <font>
+                        <Font name="Times New Roman" size="12.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="srcNum" layoutX="289.0" layoutY="31.0">
+                    <font>
+                        <Font name="Times New Roman" size="12.0" />
+                    </font>
+                </TextField>
+                <ComboBox fx:id="runModeCBox" layoutX="289.0" layoutY="226.0" prefWidth="150.0" />
+                <Button fx:id="runSimulationButton" layoutX="425.0" layoutY="296.0" mnemonicParsing="false" onMouseClicked="#simButtonClick" style="-fx-background-color: #808080;" text="Запуск моделирования">
+                    <font>
+                        <Font name="Times New Roman" size="14.0" />
+                    </font>
+                </Button>
+                <Label fx:id="errLabel" layoutX="140.0" layoutY="278.0" prefHeight="39.0" prefWidth="321.0" textFill="#c60000" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="139.0" AnchorPane.topAnchor="278.0" />
+                <Label layoutX="120.0" layoutY="173.0" prefHeight="39.0" prefWidth="121.0" text="Ammount of requests">
+                    <font>
+                        <Font name="Times New Roman" size="12.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="reqAmount" layoutX="290.0" layoutY="182.0">
+                    <font>
+                        <Font name="Times New Roman" size="12.0" />
+                    </font>
+                </TextField>
+                <CheckBox fx:id="autoPickButton" layoutX="454.0" layoutY="185.0" mnemonicParsing="false" onMouseClicked="#autoPickButtonClick" prefHeight="17.0" prefWidth="13.0" />
+                <Label layoutX="481.0" layoutY="173.0" prefHeight="39.0" prefWidth="114.0" text="Подобрать автоматически">
+                    <font>
+                        <Font name="Times New Roman" size="10.0" />
+                    </font>
+                </Label>
+                <Button fx:id="clearButton" layoutX="41.0" layoutY="296.0" mnemonicParsing="false" onMouseClicked="#clearButtonClick" prefHeight="26.0" prefWidth="79.0" style="-fx-background-color: #808080;" text="Очистить">
+                    <font>
+                        <Font name="Times New Roman" size="14.0" />
+                    </font>
+                </Button>
+            <TextField fx:id="lambTextField" layoutX="492.0" layoutY="31.0" prefHeight="4.0" prefWidth="57.0" promptText="λ">
+               <font>
+                  <Font name="Times New Roman" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="aTextField" layoutX="492.0" layoutY="83.0" prefHeight="4.0" prefWidth="57.0" promptText="a">
+               <font>
+                  <Font name="Times New Roman" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="bTextField" layoutX="492.0" layoutY="133.0" prefHeight="4.0" prefWidth="57.0" promptText="b">
+               <font>
+                  <Font name="Times New Roman" size="12.0" />
+               </font>
+            </TextField>
+            <Label layoutX="475.0" layoutY="35.0" text="λ =">
+               <font>
+                  <Font name="Times New Roman" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="475.0" layoutY="87.0" text="a =">
+               <font>
+                  <Font name="Times New Roman" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="475.0" layoutY="137.0" text="b =">
+               <font>
+                  <Font name="Times New Roman" size="12.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+        <Label alignment="CENTER" layoutX="191.0" layoutY="27.0" prefHeight="48.0" prefWidth="218.0" text="Ввод данных" textFill="#fffafa">
+            <font>
+                <Font name="Harlow Solid Italic" size="24.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

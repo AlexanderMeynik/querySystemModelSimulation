@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #0000FF; -fx-background-image: url('file:src/assets/sdedwedwd.jpg');" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.EvCrFormController">
+    <children>
+      <TabPane layoutX="1.0" layoutY="67.0" prefHeight="383.0" prefWidth="600.0" style="-fx-background-image: url('file:src/assets/photo-1588345921523-c2dcdb7f1dcd.jpg');" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Каледарь">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                            <TableView fx:id="tableView" layoutX="67.0" layoutY="33.0" prefHeight="259.0" prefWidth="464.0" style="-fx-background-image: url('file:src/assets/photo-1588345921523-c2dcdb7f1dcd.jpg');">
+                                <columns>
+                                    <TableColumn fx:id="eventCol" prefWidth="101.0" text="Событие" />
+                                    <TableColumn fx:id="timeCol" prefWidth="73.0" text="Время" />
+                                    <TableColumn fx:id="actionCol" prefWidth="99.0" text="Действие" />
+                                    <TableColumn fx:id="countEvCol" prefWidth="99.0" text="Число заявок" />
+                                    <TableColumn fx:id="countDecCol" prefWidth="91.0" text="Число отказов" />
+                                </columns>
+                            </TableView>
+                            <Button fx:id="performStepButton" layoutX="451.0" layoutY="314.0" mnemonicParsing="false" onMouseClicked="#stepButtonClick" style="-fx-background-color: #808080;" text="Выполнить шаг">
+                                <font>
+                                    <Font name="Times New Roman" size="14.0" />
+                                </font>
+                            </Button>
+                            <Button fx:id="openResButton" layoutX="39.0" layoutY="314.0" mnemonicParsing="false" onMouseClicked="#resOpenButtonClick" style="-fx-background-color: #808080;" text="Открыть результаты">
+                                <font>
+                                    <Font name="Times New Roman" size="14.0" />
+                                </font>
+                            </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Буферы и состояние системы">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="bStateTable" layoutX="22.0" layoutY="68.0" prefHeight="200.0" prefWidth="302.0" style="-fx-background-image: url('file:src/assets/photo-1588345921523-c2dcdb7f1dcd.jpg') url('file:src/assets/photo-1588345921523-c2dcdb7f1dcd.jpg');">
+                          <columns>
+                            <TableColumn fx:id="buffNum" prefWidth="75.0" text="Позиция" />
+                            <TableColumn fx:id="cTimeCol" prefWidth="75.0" text="Время" />
+                              <TableColumn fx:id="ssourceCol" prefWidth="75.0" text="Источник" />
+                              <TableColumn fx:id="reqNumberCol" prefWidth="75.0" text="Номер" />
+                          </columns>
+                        </TableView>
+                        <TableView fx:id="currectStateTabble" layoutX="323.0" layoutY="68.0" prefHeight="200.0" prefWidth="257.0" style="-fx-background-image: url('file:src/assets/photo-1588345921523-c2dcdb7f1dcd.jpg');">
+                          <columns>
+                            <TableColumn fx:id="ddevIceCol" prefWidth="75.0" text="Устройство" />
+                              <TableColumn fx:id="c2TimeCol" prefWidth="75.0" text="Время" />
+                            <TableColumn fx:id="sstateCol" prefWidth="47.0" text="Статус" />
+                              <TableColumn fx:id="requestInfoCol" prefWidth="59.0" text="Заявка" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+        <Label alignment="CENTER" layoutX="187.0" layoutY="14.0" prefHeight="42.0" prefWidth="227.0" text="Календарь событий" textFill="#fffafa">
+            <font>
+                <Font name="Harlow Solid Italic" size="24.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

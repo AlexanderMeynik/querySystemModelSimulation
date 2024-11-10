@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #0000FF; -fx-background-image: url('file:src/assets/sdedwedwd.jpg');" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ResultsFormController">
+    <children>
+        <AnchorPane layoutY="100.0" prefHeight="350.0" prefWidth="600.0" style="-fx-background-color: #F4FFA0; -fx-background-image: url('file:src/assets/photo-1588345921523-c2dcdb7f1dcd.jpg');">
+            <children>
+                <TableView fx:id="efficiencyTable" layoutX="28.0" layoutY="46.0" prefHeight="135.0" prefWidth="401.0" style="-fx-background-color: #FFFFFF; -fx-background-image: url('file:src/assets/photo-1588345921523-c2dcdb7f1dcd.jpg');">
+                    <columns>
+                        <TableColumn fx:id="sourceCol" prefWidth="64.0" text="Источник" />
+                        <TableColumn fx:id="requestAmountCol" prefWidth="124.0" text="Количество заявок" />
+                        <TableColumn fx:id="refusalProbabilityCol" prefWidth="50.0" text="Pотказа" />
+                        <TableColumn fx:id="timeStayCol" prefWidth="55.0" text="Tпреб." />
+                        <TableColumn fx:id="timeWaitCol" prefWidth="54.0" text="Tбп" />
+                        <TableColumn fx:id="timeMakeCol" prefWidth="53.0" text="Tобcл" />
+                    </columns>
+                </TableView>
+                <TableView fx:id="deviceEfficiencyTable" layoutX="164.0" layoutY="193.0" prefHeight="143.0" prefWidth="272.0" style="-fx-background-image: url('file:src/assets/photo-1588345921523-c2dcdb7f1dcd.jpg');">
+                    <columns>
+                        <TableColumn fx:id="sourcesCol" prefWidth="75.0" text="Прибор" />
+                        <TableColumn fx:id="usageCoefficientCol" prefWidth="196.0" text="Коэффициент использования" />
+                    </columns>
+                </TableView>
+            <TableView fx:id="TableDispertions" layoutX="429.0" layoutY="46.0" prefHeight="135.0" prefWidth="151.0" style="-fx-background-image: url('file:src/assets/photo-1588345921523-c2dcdb7f1dcd.jpg');">
+              <columns>
+                <TableColumn fx:id="dStayCol" prefWidth="75.0" text="Дбп" />
+                <TableColumn fx:id="dProcCol" prefWidth="75.0" text="Добсл" />
+              </columns>
+            </TableView>
+            <Button fx:id="openChartButton" layoutX="467.0" layoutY="310.0" mnemonicParsing="false" onMouseClicked="#openChartButtonClick" style="-fx-background-color: #808080;" text="открытьГрафики">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="sLabel" layoutX="26.0" layoutY="205.0">
+               <font>
+                  <Font name="Times New Roman" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="bLabel" layoutX="27.0" layoutY="244.0">
+               <font>
+                  <Font name="Times New Roman" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="aLabel" layoutX="33.0" layoutY="21.0">
+               <font>
+                  <Font name="Times New Roman" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="buLabel" layoutX="93.0" layoutY="21.0">
+               <font>
+                  <Font name="Times New Roman" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lambLabel" layoutX="157.0" layoutY="21.0">
+               <font>
+                  <Font name="Times New Roman" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="rLabel" layoutX="28.0" layoutY="316.0">
+               <font>
+                  <Font name="Times New Roman" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="dLabel" layoutX="26.0" layoutY="281.0">
+               <font>
+                  <Font name="Times New Roman" size="12.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+        <Label alignment="CENTER" layoutX="207.0" layoutY="26.0" prefHeight="45.0" prefWidth="202.0" text="Результаты" textFill="#fffafa">
+            <font>
+                <Font name="Informal Roman" size="24.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

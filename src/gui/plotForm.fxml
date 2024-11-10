@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #0000FF; -fx-background-image: url('src/assets/sdedwedwd.jpg');" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.plotFormController">
+    <children>
+        <AnchorPane layoutY="100.0" prefHeight="350.0" prefWidth="600.0" style="-fx-background-color: #F4FFA0; -fx-background-image: url('file:src/assets/photo-1588345921523-c2dcdb7f1dcd.jpg');">
+         <children>
+            <TabPane prefHeight="350.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="ВходныеДанные">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="leftLimTextF" layoutX="101.0" layoutY="107.0" />
+                              <TextField fx:id="rightLimTextF" layoutX="335.0" layoutY="107.0" />
+                              <ComboBox fx:id="selectVariableComboBox" layoutX="209.0" layoutY="49.0" prefWidth="150.0" />
+                              <TextField fx:id="stepTextF" layoutX="101.0" layoutY="161.0" />
+                              <Button fx:id="drawPlotsButton" layoutX="445.0" layoutY="281.0" mnemonicParsing="false" onMouseClicked="#drawPlotsButtonClick" style="-fx-background-color: #808080;" text="Нарисовать графики">
+                                 <font>
+                                    <Font name="Times New Roman" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="errLabel" layoutX="183.0" layoutY="213.0" prefHeight="45.0" prefWidth="255.0" textFill="#a80000">
+                                 <font>
+                                    <Font name="Times New Roman" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="abDiff" layoutX="335.0" layoutY="161.0" />
+                              <Label layoutX="40.0" layoutY="113.0" text="Left Limit">
+                                 <font>
+                                    <Font name="Times New Roman" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="268.0" layoutY="113.0" text="Right Limit">
+                                 <font>
+                                    <Font name="Times New Roman" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="40.0" layoutY="167.0" text="Step">
+                                 <font>
+                                    <Font name="Times New Roman" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="272.0" layoutY="167.0" text="d=b-a">
+                                 <font>
+                                    <Font name="Times New Roman" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab fx:id="tabP" text="график P">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <LineChart fx:id="pChart" layoutY="10.0" prefHeight="323.0" prefWidth="600.0">
+                                <xAxis>
+                                  <CategoryAxis fx:id="lambCol" side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis fx:id="pCol" label="P" prefWidth="21.0" side="LEFT" />
+                                </yAxis>
+                              </LineChart>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="tabT" text="график T">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <LineChart fx:id="tChart" layoutY="10.0" prefHeight="323.0" prefWidth="600.0">
+                                 <xAxis>
+                                    <CategoryAxis fx:id="lambCol1" side="BOTTOM" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis fx:id="tCol" label="T" prefWidth="21.0" side="LEFT" />
+                                 </yAxis>
+                              </LineChart>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="tabE" text="график E">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <LineChart fx:id="eChart" layoutY="10.0" prefHeight="323.0" prefWidth="600.0">
+                                 <xAxis>
+                                    <CategoryAxis fx:id="lambCol2" side="BOTTOM" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis fx:id="eCol" label="E" prefWidth="21.0" side="LEFT" />
+                                 </yAxis>
+                              </LineChart>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+        </AnchorPane>
+        <Label alignment="CENTER" layoutX="170.0" layoutY="25.0" prefHeight="45.0" prefWidth="261.0" text="Форма для графиков" textFill="#fffafa">
+            <font>
+                <Font name="Informal Roman" size="24.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
