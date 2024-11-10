@@ -27,12 +27,15 @@
 Отражение результатов после сбора статистики: ОР1 — сводная таблица результатов.
 
 Формализованная схема системы:
+
 ![1.jpg](images%2F1.jpg)
 
 Пример временной диаграммы обслуживания:
+
 ![3.jpg](images%2F3.jpg)
 
 Блок схема алгоритма обработки заявки:
+
 ![2.jpg](images%2F2.jpg)
 
 ## Описание назначеняи классов
@@ -65,7 +68,9 @@
 Для создания графических интерфесов на базе fxml было установлено ПО [scene builder](https://gluonhq.com/products/scene-builder/#download).
 
 Конфигурация для импорта модуля sdk:
+
 ![conf.png](images%2Fconf.png)
+
 VM - options:
 ```bash
  --module-path "C:\JavaFx\openjfx-17.0.1_windows-x64_bin-sdk\javafx-sdk-17.0.1\lib" --add-modules=javafx.controls,javafx.fxml
@@ -78,19 +83,26 @@ VM - options:
 
 Окно с конфигурацие повзоляет задавать число элментов системы, а также параметры для законов,
 по которым работают генераторы и обработчики:
+
 ![firstPage.png](images%2FfirstPage.png)
+
 В данном случае combo box позволяет выбрать пошаговый режим исполнения программы).
 
 
 Послt запуска симуляции можно будет увидеть следующее окно:
+
 ![eventCalendar.png](images%2FeventCalendar.png)
+
 
 При выборе пошагового режима пользователю будет доступна кнопка для произведния шага:
 
 ![eventCalStep.png](images%2FeventCalStep.png)
+
 Во торой вкладке данного окнабудет отображаться состояние системы на момент текущего шага:
+
 ![eventCalStepData.png](images%2FeventCalStepData.png)
 
 После провдеения моделирования будет выведено окно со статистикой:
+
 ![simulationResults.png](images%2FsimulationResults.png)
 
